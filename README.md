@@ -146,39 +146,6 @@ feature_cols.json
 
 Place them in the `models/` folder.
 
-### 2. Backend (coming soon)
-
-```bash
-cd backend
-pip install fastapi uvicorn joblib scikit-learn pandas numpy
-uvicorn main:app --reload
-```
-
-### 3. Frontend (coming soon)
-
-Upload a household's CSV of readings → get cluster assignment + anomaly flag back.
-
----
-
-## Dependencies
-
-```
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-joblib
-```
-
-Install all at once:
-
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn joblib
-```
-
----
-
 ## Key findings
 
 - **MAC000037** is the clearest anomaly in the dataset — 99.2% zero readings with occasional spikes strongly suggests a faulty meter or long-term vacant property
@@ -186,17 +153,7 @@ pip install pandas numpy scikit-learn matplotlib seaborn joblib
 - **Peer group comparison matters** — MAC004488 would not stand out globally, but within the Heavy Users cluster its peak ratio of 42.7 is dramatically unusual
 - The unsupervised approach discovered a natural split between normal and heavy users without any predefined labels
 
----
 
-## What's next
-
-- [ ] FastAPI backend to serve predictions on new household data
-- [ ] React frontend with CSV upload and anomaly report
-- [ ] Deployment on Railway / Render
-- [ ] Add more blocks (15–20) for more robust clustering
-- [ ] Experiment with Gaussian Mixture Models for soft cluster assignments
-
----
 
 ## License
 
